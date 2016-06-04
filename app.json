@@ -1,0 +1,10 @@
+{
+	"name": "sales-mapp",
+	"description": "Prototype for sales-mapp",
+	"repository": "https://github.com/mbell8903/sales-map",
+	"logo": "http://sales-mapp.herokuapp.com/public/img/logo.svg",
+	"keywords": ["node", "express", "static", "sales"],
+	"addons": [
+		"mongolab"
+	]
+}

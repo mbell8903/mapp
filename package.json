@@ -27,7 +27,9 @@
     "moment": "^2.10.x",
     "node-sass": "^3.3.2",
     "node-static": "^0.7.7",
-    "underscore": "^1.8.x"
+    "request-promise": "^3.0.0",
+    "underscore": "^1.8.x",
+    "xml2js": "^0.4.16"
   },
   "bugs": {
     "url": "https://github.com/mbell8903/sales-mapp/issues"

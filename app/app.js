@@ -23,7 +23,7 @@ process.on('uncaughtException', function (err) {
 // Set up the various directory constants.
 global.__basedir = path.join(__dirname, '..');
 global.__appdir = __dirname;
-global.__assetsdir = path.join(global.__basedir, 'public');
+global.__assetsdir = path.join(process.env.PWD, 'public');
 global.__configdir = path.join(global.__appdir, 'config');
 global.__routesdir = path.join(global.__appdir, 'routes');
 global.__modelsdir = path.join(global.__appdir, 'models');
@@ -166,5 +166,6 @@ readDir(global.__routesdir).then(function (routes) {
 		console.info(__dirname);
 		console.info(global.__basedir);
 		console.info(global.__assetsdir);
+		console.info(process.env.PWD);
 	});
 });

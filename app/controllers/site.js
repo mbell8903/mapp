@@ -6,5 +6,7 @@
  * @param {Object} res The HTTP response object.
  */
 exports.index = function (req, res) {
-	res.render('index.ejs', {page: req.params.page});
+	res.render('index.ejs', {
+		page: req.params.page
+	});
 };

@@ -3,7 +3,7 @@
 var apiCtrl = require(path.join(global.__ctrldir, 'api'));
 
 /**
- * The site routes
+ * The api routes
  * @param {Object} app An ExpressJS object
  */
 module.exports = function (app) {

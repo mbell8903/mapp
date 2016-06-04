@@ -8,4 +8,8 @@
       accessToken: 'pk.eyJ1IjoidG9tbXlva2VlZmUiLCJhIjoiY2lwMXA5N2RnMDE2MHZibTVrYnhyMnZ1bSJ9.wGvyyAi1pyxbTnhvil-gtw'
   }).addTo(mymap);
   });
+
+  $.getJSON( "api/addresses", function( data ) {
+    $('pre').append(JSON.stringify(data.data, null, 4))
+  });
 })()

@@ -1,13 +1,10 @@
-/*
- * 
- */
-
 'use strict';
-process.env.PWD = process.cwd();
 
 global.Promise = require('bluebird');
 global._ = require('underscore');
 global.path = require('path');
+
+process.env.PWD = path.join('..', process.cwd());
 
 var bodyParser = require('body-parser'),
 	compression = require('compression'),
@@ -35,6 +32,9 @@ global.__modelsdir = path.join(global.__appdir, 'models');
 global.__ctrldir = path.join(global.__appdir, 'controllers');
 global.__viewsdir = path.join(global.__appdir, 'views');
 global.__libdir = path.join(global.__appdir, 'lib');
+
+console.log(__dirname);
+
 
 // Sets the SiteUtil global
 global.SiteUtil = require(path.join(global.__libdir, 'site-util'));
@@ -168,7 +168,6 @@ readDir(global.__routesdir).then(function (routes) {
 		console.info('Server started on port 0.0.0.0:' + app.get('port'));
 		console.info('---------------------------------------------------');
 
-		console.info(__dirname);
 		console.info(global.__assetsdir);
 	});
 });

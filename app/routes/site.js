@@ -15,11 +15,10 @@ module.exports = function (app) {
 
 	app.route('/data/addresses')
 		.get(siteCtrl.getAddressData);
-		
-	  app.route('/dashboard/:page')
-    .get(siteCtrl.index)
 
-  app.route('/:page')
-    .get(siteCtrl.index);
-};
+	app.route('/dashboard/:page')
+		.get(siteCtrl.index);
+
+	app.route('/:page')
+		.get(siteCtrl.index);
 };

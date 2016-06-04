@@ -35,8 +35,8 @@ exports.getByAddress = function (obj) {
 		url: 'http://www.zillow.com/webservice/GetSearchResults.htm',
 		qs: {
 			'zws-id': 'X1-ZWz19pfi8vvmyz_7zykg',
-			address: obj.address,
-			citystatezip: obj.zipcode
+			address: encodeURIComponent(obj.address).replace(/\%20/g, '+'),
+			citystatezip: encodeURIComponent(obj.zipcode).replace(/\%20/g, '+')
 		}
 	}).then(function (data) {
 		return parseString(data).then(function (data) {

@@ -10,12 +10,6 @@ module.exports = function (app) {
 	app.route('/')
 		.get(siteCtrl.index);
 
-	app.route('/data')
-		.get(siteCtrl.getData);
-
-	app.route('/data/addresses')
-		.get(siteCtrl.getAddressData);
-
 	app.route('/dashboard/:page')
 		.get(siteCtrl.index);
 

@@ -7,7 +7,7 @@ var responseHelper = require(path.join(global.__libdir, 'response-helper'));
  * @param {Object} res The HTTP response object.
  */
 exports.index = function (req, res) {
-	res.render('index.ejs');
+	res.render('index.ejs', {page: req.params.page});
 };
 
 /**

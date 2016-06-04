@@ -1,7 +1,14 @@
 <% include ./common/header.ejs %>
-<% include ./common/navigation.ejs %>
 <% include ./common/page-header.ejs %>
-<% include ./home.ejs %>
+<% if (!page) { %>
+  <% include home.ejs %>
+<% } %>
+<% if (page == "dashboard") { %>
+  <% include dashboard.ejs %>
+<% } %>
+<% if (page == "new-item") { %>
+  <% include new-item.ejs %>
+<% } %>
 <% include ./common/page-footer.ejs %>
 <% include ./common/core-js.ejs %>
 <% include ./common/footer.ejs %>

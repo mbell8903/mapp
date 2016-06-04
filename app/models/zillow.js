@@ -44,8 +44,15 @@ exports.getByAddress = function (obj) {
 				var x = data['SearchResults:searchresults'].response[0].results[0].result[0];
 
 				return {
-					type: 'Point',
-					coordinates: [ x.address.longitude, x.address.latitude ]
+					type: 'Feature',
+					properties: {
+						name: x.address[0].street[0],
+						popupContent: '$' + x.zestimate[0].amount[0]['_']
+					},
+					geometry: {
+						type: 'Point',
+						coordinates: [x.address[0].longitude[0], x.address[0].latitude[0]]
+					}
 				};
 			}
 

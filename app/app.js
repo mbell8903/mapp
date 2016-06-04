@@ -25,8 +25,8 @@ process.on('uncaughtException', function (err) {
 });
 
 // Set up the various directory constants.
-global.__basedir = path.join(__dirname, '..');
 global.__appdir = __dirname;
+global.__basedir = path.join(__dirname, '..');
 global.__assetsdir = path.join(global.__basedir, 'public');
 global.__configdir = path.join(global.__appdir, 'config');
 global.__routesdir = path.join(global.__appdir, 'routes');

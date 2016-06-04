@@ -3,6 +3,7 @@
  */
 
 'use strict';
+process.env.PWD = process.cwd();
 
 global.Promise = require('bluebird');
 global._ = require('underscore');
@@ -34,6 +35,9 @@ global.__modelsdir = path.join(global.__appdir, 'models');
 global.__ctrldir = path.join(global.__appdir, 'controllers');
 global.__viewsdir = path.join(global.__appdir, 'views');
 global.__libdir = path.join(global.__appdir, 'lib');
+
+console.log(__dirname);
+
 
 // Sets the SiteUtil global
 global.SiteUtil = require(path.join(global.__libdir, 'site-util'));

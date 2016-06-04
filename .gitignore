@@ -1,8 +1,5 @@
 /bower_components
 /.idea
 npm-debug.log*
-/public/lib
-/public/css/main.min.css
-/public/css/main.css
 /node_modules
 /jsdoc-out

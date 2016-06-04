@@ -151,7 +151,7 @@ readDir(global.__routesdir).then(function (routes) {
 		middleware.handleTLError(err, req, res);
 	});
 
-	app.set('port', global.config.port || 3000);
+	app.set('port', process.env.PORT || 5000);
 	app.set('hostname', global.config.hostname || '0.0.0.0');
 
 	// Create our HTTP server.

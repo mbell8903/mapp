@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 EB's, LLC. All Rights Reserved.
+ *
  */
 
 'use strict';

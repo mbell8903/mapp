@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 EB's, LLC. All Rights Reserved.
+ * 
  */
 
 'use strict';
@@ -52,7 +52,7 @@ Promise.config({
 global.config = require('./config/config').read();
 
 // Set up logging
-require('tl-logging').set({
+require(path.join(global.__libdir, 'site-logging')).set({
 	title: global.config.title,
 	level: global.config.logLevel || 'info',
 	facility: 'local4'

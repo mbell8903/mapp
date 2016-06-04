@@ -1,7 +1,6 @@
 'use strict';
 
-var framework = require('uv-framework'),
-	responseHelper = framework.response.helpers.json;
+var responseHelper = require(path.join(global.__libdir, 'response-helper'));
 /**
  * Renders the index page.
  * @param {Object} req The HTTP request object.

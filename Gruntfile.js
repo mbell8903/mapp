@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 EB's, LLC. All Rights Reserved.
+ * 
  */
 
 module.exports = function (grunt) {

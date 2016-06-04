@@ -1,0 +1,23 @@
+.home {
+
+}
+
+.filter {
+  padding-top: 30px;
+  border-right: 1px solid #333;
+  min-height: 100vh;
+
+  &__headline {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.hotspots {
+  padding-top: 30px;
+  min-height: 100vh;
+  &__headline {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

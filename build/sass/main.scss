@@ -13,5 +13,9 @@
 @import 'main/mixins/vendor-prefixes';
 @import 'main/spinners';
 @import 'main/tabs';
+@import 'mixins';
 
 // Add custom styles here
+@import 'styles';
+@import 'header';
+@import 'home';

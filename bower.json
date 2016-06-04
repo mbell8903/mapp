@@ -1,0 +1,27 @@
+{
+  "name": "sales-mapp",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "app/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbell8903/sales-mapp.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bluebird": "~3.4.0",
+    "bootstrap-sass-official": "3.3.6",
+    "components-font-awesome": "4.6.3",
+    "es5-shim": "~4.5.8",
+    "jquery": "~2.1.4",
+    "moment": "~2.13.0",
+    "underscore": "~1.8.3"
+  }
+}

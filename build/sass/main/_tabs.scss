@@ -1,0 +1,15 @@
+.tab-content {
+	background-color: $bg-default;
+	padding: $tab-content-padding;
+	border: 1px solid $nav-tabs-border-color;
+	border-top: 0;
+	border-radius: $border-radius-base;
+	margin-bottom: $line-height-computed;
+
+	@media (min-width: $screen-sm-min) {
+		& {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+	}
+}

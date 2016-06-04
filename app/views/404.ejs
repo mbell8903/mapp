@@ -1,0 +1,12 @@
+<% /* Copyright (C) 2014 EB's, LLC. All Rights Reserved. */ %>
+<%
+// Override page config
+_.extend(localpage, {
+	links: false
+});
+code = 404;
+title = 'NotFound';
+message = 'Sorry, the page you are looking for is currently unavailable. Please try again later.'
+showback = true;
+%>
+<% include ./error.ejs %>

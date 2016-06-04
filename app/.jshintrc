@@ -1,0 +1,11 @@
+{
+	"extends": "../.jshintrc",
+	"node": true,
+	"esnext": true,
+	"globals": {
+		"_": false,
+		"path": false,
+		"Promise": false,
+		"SiteError": false
+	}
+}

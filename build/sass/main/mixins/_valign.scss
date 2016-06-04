@@ -1,0 +1,23 @@
+@mixin valign-helper() {
+  white-space: nowrap;
+  /*letter-spacing: -0.5em;*/
+
+  &:after {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	content: '';
+	font-family: monospace;
+	zoom: 1;
+  }
+}
+
+@mixin valign() {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+
+  & > :not(.valign-helper) {
+	letter-spacing: initial;
+  }
+}

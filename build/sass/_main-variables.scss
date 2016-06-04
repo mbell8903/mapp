@@ -1,0 +1,46 @@
+$text-direction: ltr !default;
+
+$bg-default: #fff !default;
+$bg-void: darken($bg-default, 10%) !default;
+
+$brand-primary: #919da3 !default;
+$brand-secondary: #008c28 !default;
+$brand-info: #59ABE3 !default;
+$brand-warning: #F5AB35 !default;
+$brand-danger: #dd0603 !default;
+
+$accent-line-thickness: 3px !default;
+$spinner-size: 50px !default;
+
+$btn-secondary-color:              #fff !default;
+$btn-secondary-bg:                 $brand-secondary !default;
+$btn-secondary-border:             darken($btn-secondary-bg, 5%) !default;
+
+$state-info-bg:                  lighten($brand-info, 30%);
+$state-info-text:                darken(desaturate($state-info-bg, 50%), 50%);
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
+
+$state-warning-bg:               lighten($brand-warning, 30%);
+$state-warning-text:             darken(desaturate($state-warning-bg, 50%), 50%);
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
+
+$state-danger-bg:                lighten($brand-danger, 30%);
+$state-danger-text:              darken(desaturate($state-danger-bg, 50%), 50%);
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
+
+$classification-banner-height: 20px;
+
+$legend-border-color: $brand-primary !default;
+
+$link-color:                     darken($brand-primary, 7%);
+
+$tab-content-padding: 20px !default;
+
+// Font-awesome path
+$fa-font-path: "../lib/fonts/fa/" !default;
+
+// Boostrap path
+$icon-font-path: "../lib/fonts/bootstrap/" !default;
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";

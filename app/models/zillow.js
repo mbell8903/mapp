@@ -41,7 +41,12 @@ exports.getByAddress = function (obj) {
 	}).then(function (data) {
 		return parseString(data).then(function (data) {
 			if (data['SearchResults:searchresults'].response && data['SearchResults:searchresults'].response[0] && data['SearchResults:searchresults'].response[0].results && data['SearchResults:searchresults'].response[0].results[0] && data['SearchResults:searchresults'].response[0].results[0].result && data['SearchResults:searchresults'].response[0].results[0].result[0]) {
-				return data['SearchResults:searchresults'].response[0].results[0].result[0];
+				var x = data['SearchResults:searchresults'].response[0].results[0].result[0];
+
+				return {
+					type: 'Point',
+					coordinates: [ x.address.longitude, x.address.latitude ]
+				};
 			}
 
 			return {};

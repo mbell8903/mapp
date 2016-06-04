@@ -94,7 +94,7 @@ app.set('views', global.__viewsdir);
 
 //static resources for stylesheets, images, javascript files
 // app.use('/public', express.static(global.__assetsdir));
-app.use(express.static(global.__assetsdir));
+app.use('/public', express.static(global.__assetsdir));
 
 // Extend the request with some basic elements
 app.use(function (req, res, next) {

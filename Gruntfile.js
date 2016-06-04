@@ -116,17 +116,7 @@ module.exports = function (grunt) {
 					src: ['./underscore-min.js', './underscore.js', './underscore-min.map'],
 					dest: '<%= project.js_dir %>/'
 				}]
-			},
-      'map': {
-        files: [{
-          expand: true,
-          filter: 'isFile',
-          flatten: true,
-          cwd: 'js/',
-          src: ['./map.js'],
-          dest: '<%= project.js_dir %>/'
-        }]
-      }
+			}
 		},
 		cssmin: {
 			dist: {

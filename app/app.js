@@ -4,8 +4,6 @@ global.Promise = require('bluebird');
 global._ = require('underscore');
 global.path = require('path');
 
-process.env.PWD = path.join('..', process.cwd());
-
 var bodyParser = require('body-parser'),
 	compression = require('compression'),
 	consolidate = require('consolidate'),
@@ -168,6 +166,6 @@ readDir(global.__routesdir).then(function (routes) {
 		console.info('Server started on port 0.0.0.0:' + app.get('port'));
 		console.info('---------------------------------------------------');
 
-		console.info(global.__assetsdir);
+		console.info(__dirname);
 	});
 });

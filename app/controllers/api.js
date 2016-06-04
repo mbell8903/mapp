@@ -31,8 +31,8 @@ exports.getAddressData = function (req, res, next) {
 
 		return Promise.map(data.data, function (activity) {
 			return zillow.getByAddress({
-				address: encodeURIComponent(activity.address).replace(/\%20/g, '+'),
-				zipcode: encodeURIComponent(activity.zipcode).replace(/\%20/g, '+')
+				address: activity.address,
+				zipcode: activity.zipcode
 			});
 		}).then(function (data) {
 			res.json(responseHelper.ok('Successfully retrieved data.', {

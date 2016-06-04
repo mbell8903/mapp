@@ -49,12 +49,12 @@ Promise.config({
 });
 
 // Load the configuration after the directory constants.
-global.config = require('./config/config').read();
+global.config = require('./config/config').get();
 
 // Set up logging
 require(path.join(global.__libdir, 'site-logging')).set({
-	title: global.config.title,
-	level: global.config.logLevel || 'info',
+	title: global.config.TITLE,
+	level: global.config.LOG_LEVEL || 'info',
 	facility: 'local4'
 });
 
@@ -151,11 +151,10 @@ readDir(global.__routesdir).then(function (routes) {
 		middleware.handleTLError(err, req, res);
 	});
 
-	app.set('port', process.env.PORT || 5000);
-	app.set('hostname', global.config.hostname || '0.0.0.0');
+	app.set('port', process.env.PORT || global.config.PORT);
 
 	// Create our HTTP server.
-	http.createServer(app).listen(app.get('port'), app.get('hostname'), function () {
+	http.createServer(app).listen(app.get('port'), function () {
 		app._router.stack.forEach(function (r) {
 			if (r.route) {
 				_.each(_.keys(r.route.methods), function (method) {
@@ -164,7 +163,7 @@ readDir(global.__routesdir).then(function (routes) {
 			}
 		});
 
-		console.info("Server started on port " + app.get('hostname') + ':' + app.get('port'));
-		console.info("---------------------------------------------------");
+		console.info('Server started on port 0.0.0.0:' + app.get('port'));
+		console.info('---------------------------------------------------');
 	});
 });

@@ -1,18 +1,22 @@
-/*
- * 
- */
-
 'use strict';
 
+var conf = {
+	NODE_ENV: 'production',
+	PORT: 5000,
+	SECRET: 'foobarbaz',
+	SESSION_LENGTH: 3600000,
+	TITLE: 'Sales Mapp',
+	LOG_LEVEL: 'debug'
+};
+
 /**
- * Reads the configuration file.
- * @returns {Object} The configuration.
+ * Gets the configuration
+ * @returns {Object}
  */
-exports.read = function () {
-	// TODO - If we ever want to allow reloading, we will need to actually read this rather than require it.
-	var config = require('./config.json');
+exports.get = function () {
+	if (process.env.MONGOLAB_URI) {
+		conf.MONGODB = process.env.MONGOLAB_URI;
+	}
 
-	config.environment = config.environment || process.env.NODE_ENV;
-
-	return config;
+	return _.extend(conf, process.env);
 };

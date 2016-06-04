@@ -199,7 +199,7 @@ function _handleTLErrorHTML(err, req, res) {
 		default:
 			return res.status(500).render('500', {
 				message: obj.message,
-				showerr: global.config.environment === 'development',
+				showerr: global.config.ENV === 'development',
 				err: err
 			});
 	}
@@ -208,7 +208,7 @@ function _handleTLErrorHTML(err, req, res) {
 		code: err.type,
 		title: obj.code,
 		message: obj.message,
-		showerr: global.config.environment === 'development',
+		showerr: global.config.ENV === 'development',
 		err: err
 	});
 }

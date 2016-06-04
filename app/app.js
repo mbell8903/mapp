@@ -21,8 +21,8 @@ process.on('uncaughtException', function (err) {
 });
 
 // Set up the various directory constants.
-global.__basedir = path.join(__dirname, '..');
-global.__appdir = __dirname;
+global.__basedir = (__dirname !== '/app/app') ? path.join(__dirname, '..') : path.join(__dirname, '..', '..');
+global.__appdir = (__dirname !== '/app/app') ? __dirname : path.join(__dirname, '..');
 global.__assetsdir = path.join(global.__basedir, 'public');
 global.__configdir = path.join(global.__appdir, 'config');
 global.__routesdir = path.join(global.__appdir, 'routes');
@@ -30,9 +30,6 @@ global.__modelsdir = path.join(global.__appdir, 'models');
 global.__ctrldir = path.join(global.__appdir, 'controllers');
 global.__viewsdir = path.join(global.__appdir, 'views');
 global.__libdir = path.join(global.__appdir, 'lib');
-
-console.log(__dirname);
-
 
 // Sets the SiteUtil global
 global.SiteUtil = require(path.join(global.__libdir, 'site-util'));
